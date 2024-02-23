@@ -21,6 +21,7 @@ public class personaController {
     @Autowired
     private PersonaService servicePersona;
     
+    //Aqui obtengo los datos de todas las personas
     @GetMapping
     public String ListarPersonas(Model model){
         List <Persona> personas=servicePersona.obtenerTodas();
