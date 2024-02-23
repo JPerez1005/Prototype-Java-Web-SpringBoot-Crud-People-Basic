@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Formulario de Personas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Formulario de Personas</h1>
+        <form th:object="${persona}" th:action="${accion}" method="post">
+            <input type="hidden" th:field="*{id}">
+            <br>
+            <label>Nombre: </label><input type="text" th:field="*{nombre}">
+            <br>
+            <label>Edad: </label><input type="number" th:field="*{edad}">
+            <br>
+            <input type="submit" value="Guardar" name="GuardarDatos" />
+        </form>
+        
+        <a href="/personas">Volver al listado de personas</a>
+    </body>
+</html>
